@@ -1,14 +1,24 @@
-{{ name }}
-===
-> Your README Description!
+# beemo-web
 
-{{ description }}
+## Project setup
+```
+yarn install
+```
 
+### Compiles and hot-reloads for development
 ```
-```bash
-npm install -g @vue/cli
-# OR
-yarn global add @vue/cli
-# Then
-vue init joshvillahermosa/simple-vue-reusable-template sample-app
+yarn serve
 ```
+
+### Compiles and minifies for production
+```
+yarn build
+```
+
+### Lints and fixes files
+```
+yarn lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
