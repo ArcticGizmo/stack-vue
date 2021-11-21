@@ -1,6 +1,7 @@
 <template>
   <header class="b-header" role="banner">
     <div class="sidebar-btn">
+      {{ name }}
       <BIcon class="sidebar-icon" :icon="menuIcon" :scale="0.5" @click.native="onSidebarToggle" />
     </div>
     <BIcon class="logo" :icon="beemoIcon" />

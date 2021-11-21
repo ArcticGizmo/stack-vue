@@ -7,7 +7,6 @@
 </template>
 
 <script>
-import vue from 'vue';
 import BHeader from './BHeader.vue';
 import BSidebar from './BSidebar.vue';
 import BFooter from './BFooter.vue';
