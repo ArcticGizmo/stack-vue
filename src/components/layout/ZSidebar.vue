@@ -8,9 +8,10 @@
     <ZSidebarLink
       v-for="route in routes"
       :key="route.name"
+      :to="route.path"
+      :name="route.name"
       :icon="route.icon"
       :iconProps="route.iconProps"
-      :to="route.path"
       :open="open"
     >
       {{ route.name }}
@@ -76,6 +77,7 @@ export default {
 
 .z-sidebar h1 {
   height: 2.5em;
+  text-align: center;
 }
 
 .z-sidebar .collapse-icon {

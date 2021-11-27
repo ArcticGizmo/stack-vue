@@ -1,5 +1,15 @@
 <template>
-  <router-link class="z-sidebar-link" :class="{ active }" :to="to">
+  <router-link
+    v-tooltip="{
+      classes: ['__sidebar-tooltip'],
+      content: open ? '' : name,
+      placement: 'right',
+      hideOnTargetClick: false,
+    }"
+    class="z-sidebar-link"
+    :class="{ active }"
+    :to="to"
+  >
     <div class="icon-wrapper" :class="{ open }">
       <fa-icon class="icon" :icon="icon" v-bind="iconProps" />
     </div>
@@ -17,6 +27,7 @@ export default {
   props: {
     open: { type: Boolean, default: false },
     to: { type: String, required: true },
+    name: { type: String },
     icon: { type: [String, Array], required: true },
     iconProps: { type: Object, default: () => ({}) },
   },
@@ -78,5 +89,9 @@ export default {
 
 .z-sidebar-link .icon-wrapper .icon {
   width: 100%;
+}
+
+.__sidebar-tooltip.tooltip[x-placement='right'] {
+  margin-left: 20px;
 }
 </style>

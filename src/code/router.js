@@ -2,8 +2,8 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 // Pages
-import DefaultPage from '@/components/pages/DefaultPage.vue';
 import HomePage from '@/components/pages/HomePage.vue';
+import APIPage from '@/components/pages/APIPage.vue';
 
 Vue.use(VueRouter);
 
@@ -11,14 +11,14 @@ Vue.use(VueRouter);
 const ROUTES = [
   { name: 'Home', path: '/home', component: HomePage, icon: 'home' },
   {
-    name: 'Home1',
-    path: '/home_1',
-    component: DefaultPage,
-    icon: 'anchor',
+    name: 'API',
+    path: '/api',
+    component: APIPage,
+    icon: 'cloud',
   },
-  { name: 'Home2', path: '/home_2', component: DefaultPage, icon: 'archive' },
-  { name: 'Home3', path: '/home_3', component: DefaultPage, icon: 'address-card' },
-  { name: 'Home4', path: '/home_4', component: DefaultPage, icon: 'adjust' },
+  // { name: 'Archive', path: '/archive', component: DefaultPage, icon: 'archive' },
+  // { name: 'Addresses', path: '/addresses', component: DefaultPage, icon: 'address-card' },
+  // { name: 'Colors', path: '/colors', component: DefaultPage, icon: 'adjust' },
 ];
 
 export function createRouter() {

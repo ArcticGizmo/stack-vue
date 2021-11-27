@@ -1,6 +1,7 @@
 <template>
   <div class="home-page">
-    home page
+    <h1>Here is a page Title</h1>
+    <p>Here is some text and stuff</p>
   </div>
 </template>
 
@@ -22,6 +23,11 @@ export default {
 
 <style>
 .home-page {
-  border: 1px solid orange;
+  border-bottom: 1px solid gray;
+}
+
+.home-page h1,
+.home-page p {
+  text-align: center;
 }
 </style>

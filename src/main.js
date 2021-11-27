@@ -3,9 +3,12 @@ import App from './App.vue';
 
 import { createRouter } from './code/router.js';
 import { API } from './code/api';
+import VTooltip from 'v-tooltip';
 import configureFontAwesome from './code/fa.js';
 
 configureFontAwesome();
+
+Vue.use(VTooltip);
 
 function createApp() {
   const isDev = process.env.NODE_ENV === 'development';

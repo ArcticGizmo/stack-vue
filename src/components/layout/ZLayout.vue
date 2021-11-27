@@ -2,8 +2,9 @@
   <div class="z-layout">
     <ZSidebar :open="open" :style="`width: ${width}px`" @toggle="onToggle()" />
     <router-view
-      :style="`margin-left: ${sidebarOverlaysContent ? closedWidth : width}px`"
       class="page-view"
+
+      :style="`margin-left: ${sidebarOverlaysContent ? closedWidth : width}px`"
     />
   </div>
 </template>
@@ -42,5 +43,6 @@ export default {
 <style>
 .z-layout .page-view {
   transition: 0.3s margin-left ease;
+  padding: 0.5rem;
 }
 </style>
