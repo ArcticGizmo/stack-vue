@@ -27,4 +27,12 @@ body {
   text-align: center;
   color: #2c3e50;
 }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 </style>
