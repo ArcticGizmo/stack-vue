@@ -2,7 +2,7 @@
   <div class="z-layout">
     <ZSidebar :open="open" :style="`width: ${width}px`" @toggle="onToggle()" />
     <router-view
-      :style="`margin-left: ${sidebarOverlaysContent ? openWidth : width}px`"
+      :style="`margin-left: ${sidebarOverlaysContent ? closedWidth : width}px`"
       class="page-view"
     />
   </div>
