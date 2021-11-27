@@ -1,6 +1,8 @@
 <template>
   <router-link class="z-sidebar-link" :class="{ active }" :to="to">
-    <fa-icon class="icon" :icon="icon" v-bind="iconProps" />
+    <div class="icon-wrapper" :class="{ open }">
+      <fa-icon class="icon" :icon="icon" v-bind="iconProps" />
+    </div>
     <transition name="sidebar-fade">
       <span v-if="open">
         <slot></slot>
@@ -48,7 +50,7 @@ export default {
   margin: 0.1em;
   padding: 0.4em;
   border-radius: 0.25em;
-  height: 1.5em;
+  height: 2em;
 
   color: white;
   text-decoration: none;
@@ -62,9 +64,19 @@ export default {
   background-color: var(--sidebar-item-active);
 }
 
-.z-sidebar-link .icon {
+.z-sidebar-link .icon-wrapper {
   flex-shrink: 0;
-  width: 25px;
   margin-right: 10px;
+  width: 100%;
+}
+
+.z-sidebar-link .icon-wrapper.open {
+  flex-shrink: 0;
+  margin-right: 10px;
+  width: 30px;
+}
+
+.z-sidebar-link .icon-wrapper .icon {
+  width: 100%;
 }
 </style>
