@@ -50,7 +50,7 @@ export default {
   margin: 0.1em;
   padding: 0.4em;
   border-radius: 0.25em;
-  height: 2em;
+  height: 2.25em;
 
   color: white;
   text-decoration: none;

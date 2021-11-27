@@ -1,5 +1,5 @@
 <template>
-  <div class="z-sidebar" :style="`width: ${width}px`">
+  <div class="z-sidebar">
     <h1 v-if="open">Example Project</h1>
     <h1 v-else>
       <div>E</div>
@@ -33,20 +33,11 @@ export default {
   },
   props: {
     open: { type: Boolean, default: false },
-    openWidth: { type: Number, default: 180 },
-    closedWidth: { type: Number, default: 40 },
   },
-
   computed: {
     routes() {
       return this.$router.options.routes.filter(r => !IGNORED_PATHS.includes(r.path));
     },
-    width() {
-      return this.open ? this.openWidth : this.closedWidth;
-    },
-  },
-  mounted() {
-    console.log(this.$router);
   },
   methods: {
     onToggleOpen() {
@@ -64,7 +55,7 @@ export default {
 }
 </style>
 
-<style scoped>
+<style>
 .z-sidebar {
   color: white;
   background-color: var(--sidebar-bg-color);
@@ -75,7 +66,7 @@ export default {
   top: 0;
   left: 0;
   bottom: 0;
-  padding: 0.5em;
+  padding: 0.5rem;
 
   transition: 0.3s ease;
 
@@ -87,7 +78,7 @@ export default {
   height: 2.5em;
 }
 
-.collapse-icon {
+.z-sidebar .collapse-icon {
   cursor: pointer;
   position: absolute;
   bottom: 0;
@@ -98,7 +89,7 @@ export default {
   transition: 0.2s linear;
 }
 
-.collapse-icon.open {
+.z-sidebar .collapse-icon.open {
   transform: rotate(180deg);
   transition: 0.2s linear;
 }

@@ -1,7 +1,10 @@
 <template>
   <div class="z-layout">
-    <ZSidebar :open="open" @toggle="onToggle()" />
-    <!-- <router-view class="page-view" /> -->
+    <ZSidebar :open="open" :style="`width: ${width}px`" @toggle="onToggle()" />
+    <router-view
+      :style="`margin-left: ${sidebarOverlaysContent ? openWidth : width}px`"
+      class="page-view"
+    />
   </div>
 </template>
 
@@ -13,10 +16,20 @@ export default {
   components: {
     ZSidebar,
   },
+  props: {
+    openWidth: { type: Number, default: 180 },
+    closedWidth: { type: Number, default: 56 },
+    sidebarOverlaysContent: { type: Boolean, default: false },
+  },
   data: () => {
     return {
       open: false,
     };
+  },
+  computed: {
+    width() {
+      return this.open ? this.openWidth : this.closedWidth;
+    },
   },
   methods: {
     onToggle() {
@@ -26,4 +39,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.z-layout .page-view {
+  transition: 0.3s margin-left ease;
+}
+</style>
