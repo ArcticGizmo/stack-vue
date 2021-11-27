@@ -4,6 +4,7 @@ import VueRouter from 'vue-router';
 // Pages
 import HomePage from '@/components/pages/HomePage.vue';
 import APIPage from '@/components/pages/APIPage.vue';
+import ChannelPage from '@/components/pages/ChannelPage.vue';
 
 Vue.use(VueRouter);
 
@@ -16,9 +17,7 @@ const ROUTES = [
     component: APIPage,
     icon: 'cloud',
   },
-  // { name: 'Archive', path: '/archive', component: DefaultPage, icon: 'archive' },
-  // { name: 'Addresses', path: '/addresses', component: DefaultPage, icon: 'address-card' },
-  // { name: 'Colors', path: '/colors', component: DefaultPage, icon: 'adjust' },
+  { name: 'Channel', path: '/channel', component: ChannelPage, icon: 'exchange-alt' },
 ];
 
 export function createRouter() {

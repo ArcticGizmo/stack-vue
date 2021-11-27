@@ -1,7 +1,7 @@
 <template>
   <div class="home-page">
-    <h1>Here is a page Title</h1>
-    <p>Here is some text and stuff</p>
+    <h1>Home</h1>
+    <p>Not alot to do here is there ...</p>
   </div>
 </template>
 
