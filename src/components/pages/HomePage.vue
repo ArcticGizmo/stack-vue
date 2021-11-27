@@ -21,4 +21,7 @@ export default {
 </script>
 
 <style>
+.home-page {
+  border: 1px solid orange;
+}
 </style>

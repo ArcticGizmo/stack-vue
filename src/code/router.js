@@ -3,12 +3,13 @@ import VueRouter from 'vue-router';
 
 // Pages
 import DefaultPage from '@/components/pages/DefaultPage.vue';
+import HomePage from '@/components/pages/HomePage.vue';
 
 Vue.use(VueRouter);
 
 // https://fontawesome.com/v5/cheatsheet
 const ROUTES = [
-  { name: 'Home', path: '/home', component: DefaultPage, icon: 'home' },
+  { name: 'Home', path: '/home', component: HomePage, icon: 'home' },
   {
     name: 'Home1',
     path: '/home_1',
