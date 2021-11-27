@@ -1,13 +1,17 @@
 {
-  "name": "{{name}}",
+  "name": "example__name",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "analyze": "cross-env NODE_ENV=analyze vue-cli-service serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "eslint src/**/*.js src/**/*.vue"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/vue-fontawesome": "^2.0.6",
     "axios": "^0.24.0",
     "core-js": "^3.19.0",
     "phoenix": "^1.6.2",
@@ -19,14 +23,16 @@
   "devDependencies": {
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.16.0",
     "@babel/plugin-proposal-optional-chaining": "^7.16.0",
-    "@vue/cli-plugin-babel": "^4.4.4",
+    "@vue/cli-plugin-babel": "^4.5.15",
     "@vue/cli-plugin-eslint": "^4.5.15",
-    "@vue/cli-service": "~4.4.0",
+    "@vue/cli-service": "^4.5.15",
     "babel-core": "7.0.0-bridge.0",
-    "eslint": "^8.3.0",
-    "eslint-plugin-vue": "^8.1.1",
-    "typescript": "^3.9.5",
-    "vue-template-compiler": "^2.6.11"
+    "cross-env": "^7.0.3",
+    "eslint": "^7.30.0",
+    "eslint-plugin-vue": "^7.13.0",
+    "typescript": "^4.5.2",
+    "vue-template-compiler": "^2.6.11",
+    "webpack-bundle-analyser": "^1.4.0"
   },
   "browserslist": [
     "> 1%",

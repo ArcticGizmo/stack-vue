@@ -1,18 +1,30 @@
 <template>
   <div id="app">
-    <BLayout></BLayout>
+    <ZLayout></ZLayout>
   </div>
 </template>
 
 <script>
-import BLayout from './components/layout/BLayout.vue';
+import ZLayout from './components/layout/ZLayout.vue';
 
 export default {
   name: 'App',
   components: {
-    BLayout,
+    ZLayout,
   },
 };
 </script>
 
-<style></style>
+<style>
+body {
+  margin: 0;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+</style>

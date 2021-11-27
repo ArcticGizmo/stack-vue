@@ -1,3 +1,10 @@
+const webpackConfig = {};
+
+if (process.env.NODE_ENV === 'analyze') {
+  const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+  webpackConfig.plugins = [new BundleAnalyzerPlugin()];
+}
+
 module.exports = {
   chainWebpack: config => {
     config.module
@@ -9,4 +16,5 @@ module.exports = {
         return options;
       });
   },
+  configureWebpack: webpackConfig,
 };
